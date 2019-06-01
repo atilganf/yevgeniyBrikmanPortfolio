@@ -1,0 +1,276 @@
+*{
+  box-sizing: border-box;
+}
+html, body{
+  margin: 0;
+  padding: 0;
+}
+.navbar{
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  color: #2e2e2e;
+  letter-spacing: 3px;
+  font-family: Montserrat;
+}
+.header{
+  position: relative;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: block;
+  background-color: rgb(245, 248, 250);
+  height: 300px;
+  text-align: center;
+  border-bottom: 1px solid lightgray;
+}
+.body{
+  max-width: 650px;
+  display: block;
+  min-height: 350px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.75em;
+  padding-bottom: 15px;
+}
+.footer{
+  width: 100%;
+  position: relative;
+  border-top: 1px solid lightgray;
+}
+.navbar .logo{
+  display: inline-block;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 16px 20px;
+  color: black;
+}
+.navbar .logo:hover{
+  background-color: #e3eaef;
+  color: #2c6193;
+}
+.collapsible{
+  font-size: 12px;
+  float: right;
+  z-index: 1;
+}
+.collapsible a{
+  display: block;
+  float: right;
+  padding: 19px 13px;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  margin: 0;
+  z-index: 1;
+}
+.collapsible a:hover{
+  background-color: #e3eaef;
+  color: #2c6193;
+}
+.navbar .toggleButton{
+  color: black;
+  margin: 0;
+  padding: 0;
+  float: right;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  display: none;
+}
+.navbar .toggleButton:focus{
+  outline: none;
+}
+.navbar .toggleButton i{
+  display: inline-block;
+  padding: 10px 15px;
+  font-size : 32px;
+  margin: 0;
+}
+
+.header img{
+  position: relative;
+  top: 30px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  height: 120px;
+  padding: 5px;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 50%;
+}
+.header img:hover{
+  cursor: pointer;
+  border: 1px solid grey;
+}
+.header .name{
+  position: relative;
+  top: 5px;
+  color: #3A4145;
+  font-size: 45px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: open sans,sans-serif;
+}
+.header .name:hover{
+  cursor: pointer;
+  color: #007199;
+}
+.header h2{
+  color: #0096CC;
+  font-weight: lighter;
+  position: relative;
+  font-size: 25px;
+  top: -10px;
+  font-family: Merriweather,serif;
+}
+.header h2:hover{
+  cursor: pointer;
+  color:#007199;
+}
+
+.left-col{
+  position: relative;
+  width: 75%;
+  float: left;
+  color: #2e2e2e;
+  font-family: Merriweather,serif;
+  font-size: 16px;
+  padding: 30px 30px 30px 0;
+}
+.left-col h3{
+  font-family: open sans,sans-serif;
+  font-size: 25px;
+}
+.left-col .important{
+  color: #0096CC;
+}
+.right-col{
+  position: relative;
+  width: 25%;
+  padding: 30px 13px;
+  font-size: 15px;
+  float: right;
+  color: black;
+}
+.right-col ul{
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+.right-col li{
+  padding: 0 10px;
+  margin: 0;
+}
+.right-col li:hover{
+  cursor: pointer;
+  color: #0096CC;
+}
+.right-col li a{
+  text-decoration: none;
+  color: black;
+}
+.right-col li a:hover{
+  cursor: pointer;
+  color: #0096CC;
+}
+.right-col ul i{
+  font-size: 30px;
+}
+.right-col span{
+  padding: 6px;
+  font-size: 15px;
+  position: relative;
+  bottom: 5px;
+  font-weight: lighter;
+  display: inline-block;
+  font-family: Montserrat;
+}
+.right-col h3{
+  font-family: open sans,sans-serif;
+  color: #2e2e2e;
+  font-size: 25px;
+  padding: 0 10px;
+}
+
+.footer ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  float: right;
+}
+.footer ul li{
+  display: inline-block;
+  float: right;
+  padding: 5px;
+  margin: 0;
+  color: #aaa;
+}
+.footer ul li a{
+  text-decoration: none;
+  color: #aaa;
+}
+.footer ul li a:hover{
+  cursor: pointer;
+  color: #0096CC;
+}
+.footer p{
+  color: #aaa;
+  display: block;
+  padding: 0 10px;
+  float: left;
+}
+@font-face {
+  font-family: Montserrat;
+  font-weight: 700;
+  src: url("fonts//Montserrat.otf");
+}
+@font-face {
+  font-family: Merriweather;
+  src: url("fonts//Merriweather Light.ttf");
+}
+
+@media screen and (max-width: 700px) {
+  .collapsible{
+    width: 100%;
+    display: none;
+  }
+  .collapsible a{
+    display: block;
+    border-top: 1px solid lightgray;
+    float: none;
+    text-align: left;,
+  }
+  .last{
+    border-bottom: 1px solid lightgray;
+  }
+  .navbar .toggleButton{
+    display: inline-block;
+  }
+  .left-col{
+    display: block;
+    width: 100%;
+    float: none;
+    padding: 30px 23px 0 23px;
+  }
+  .right-col{
+    display: block;
+    width: 100%;
+    float: none;
+    padding-top: 10px;
+  }
+  .right-col li{
+    display: inline-block;
+    float: left;
+  }
+}
+@media screen and (min-width: 700px) {
+  .collapsible{
+    display: block !important;
+  }
+}
