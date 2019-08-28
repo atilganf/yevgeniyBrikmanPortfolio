@@ -1,11 +1,11 @@
 @font-face {
   font-family: Montserrat;
   font-weight: 700;
-  src: url("fonts//Montserrat.otf");
+  src: url("fonts/Montserrat.otf");
 }
 @font-face {
   font-family: Merriweather;
-  src: url("fonts//Merriweather Light.ttf");
+  src: url("fonts/Merriweather Light.ttf");
 }
 * {
   box-sizing: border-box;
@@ -59,6 +59,7 @@ html body nav .collapsible {
   font-size: 12px;
   float: right;
   z-index: 1;
+  display: none;
 }
 html body nav .collapsible a {
   display: block;
@@ -237,46 +238,51 @@ html body footer ul li a:hover {
 }
 
 @media (max-width: 768px) {
-  html {
-    overflow-x: hidden;
-  }
-
-  body {
-    overflow-x: hidden;
-  }
-  body nav {
+  html body nav {
     display: grid;
     grid-template-columns: auto 60px;
     grid-template-areas: "logo button" "navbar navbar";
   }
-  body nav .logo {
+  html body nav .logo {
     grid-area: logo;
   }
-  body nav .toggleButton {
+  html body nav .toggleButton {
     grid-area: button;
-    display: inline-block !important;
+    display: inline-block;
   }
-  body nav .collapsible {
+  html body nav .collapsible {
     float: none;
     grid-area: navbar;
   }
-  body nav .collapsible a {
+  html body nav .collapsible a {
     border-top: 1px solid lightgrey;
     display: block;
     float: none;
     width: 100%;
-    padding: 20px !important;
+    padding: 20px;
   }
-  body header {
-    height: auto !important;
+  html body header {
+    height: auto;
   }
-  body main .left-col {
+  html body main {
+    padding: 30px;
+  }
+  html body main .left-col {
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+  html body main .right-col {
+    padding: 0;
     float: none;
     width: 100%;
   }
-  body main .right-col {
-    float: none;
-    width: 100px;
+  html body main .right-col h3 {
+    padding: 0;
+  }
+  html body main .right-col ul {
+    display: grid;
+    grid-template-columns: 50% auto;
   }
 }
 
