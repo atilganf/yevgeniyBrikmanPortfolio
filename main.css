@@ -59,7 +59,6 @@ html body nav .collapsible {
   font-size: 12px;
   float: right;
   z-index: 1;
-  display: none;
 }
 html body nav .collapsible a {
   display: block;
@@ -237,6 +236,11 @@ html body footer ul li a:hover {
   color: #0096cc;
 }
 
+@media (min-width: 769px) {
+  .collapsible {
+    display: block !important;
+  }
+}
 @media (max-width: 768px) {
   html body nav {
     display: grid;
@@ -253,6 +257,7 @@ html body footer ul li a:hover {
   html body nav .collapsible {
     float: none;
     grid-area: navbar;
+    display: none;
   }
   html body nav .collapsible a {
     border-top: 1px solid lightgrey;

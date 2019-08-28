@@ -57,7 +57,6 @@ html {
         font-size: 12px;
         float: right;
         z-index: 1;
-        display: none;
         a {
           display: block;
           float: right;
@@ -238,6 +237,9 @@ html {
     }
   }
 }
+@media (min-width: 769px){
+   .collapsible{display: block !important;}
+}
 @media (max-width: 768px) {
   html {
     body {
@@ -255,6 +257,7 @@ html {
         .collapsible {
           float: none;
           grid-area: navbar;
+          display: none;
           a {
             border-top: 1px solid lightgrey;
             display: block;
