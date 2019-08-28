@@ -11,54 +11,56 @@
   box-sizing: border-box;
 }
 
+html {
+  margin: 0;
+  padding: 0;
+}
 html body {
   margin: 0;
   padding: 0;
 }
-html body .navbar {
+html body nav {
   width: 100%;
   border-bottom: 1px solid lightgray;
   color: #2e2e2e;
   letter-spacing: 3px;
   font-family: Montserrat;
 }
-html body .navbar .logo {
+html body nav .logo {
   display: inline-block;
   font-size: 18px;
   text-decoration: none;
   padding: 16px 20px;
   color: black;
 }
-html body .navbar .logo:hover {
+html body nav .logo:hover {
   background-color: #e3eaef;
   color: #2c6193;
 }
-html body .navbar .toggleButton {
+html body nav .toggleButton {
   color: black;
   margin: 0;
   padding: 0;
   display: inline-block;
-  float: right;
   border: none;
   background-color: white;
-  cursor: pointer;
   display: none;
 }
-html body .navbar .toggleButton i {
+html body nav .toggleButton i {
   display: inline-block;
   padding: 10px 15px;
-  font-size: 32px;
+  font-size: 28px;
   margin: 0;
 }
-html body .navbar .toggleButton:focus {
+html body nav .toggleButton:focus {
   outline: none;
 }
-html body .navbar .collapsible {
+html body nav .collapsible {
   font-size: 12px;
   float: right;
   z-index: 1;
 }
-html body .navbar .collapsible a {
+html body nav .collapsible a {
   display: block;
   float: right;
   padding: 19px 13px;
@@ -68,11 +70,11 @@ html body .navbar .collapsible a {
   margin: 0;
   z-index: 1;
 }
-html body .navbar .collapsible a:hover {
+html body nav .collapsible a:hover {
   background-color: #e3eaef;
   color: #2c6193;
 }
-html body .header {
+html body header {
   position: relative;
   width: 100%;
   padding: 0;
@@ -83,23 +85,23 @@ html body .header {
   text-align: center;
   border-bottom: 1px solid lightgray;
 }
-html body .header img {
+html body header .avatar {
   position: relative;
   top: 30px;
   display: block;
   margin-right: auto;
   margin-left: auto;
   height: 120px;
-  padding: 5px;
+  padding: 8px;
   background-color: white;
   border: 1px solid lightgray;
   border-radius: 50%;
 }
-html body .header img:hover {
+html body header .avatar:hover {
   cursor: pointer;
   border: 1px solid grey;
 }
-html body .header .name {
+html body header .name {
   position: relative;
   top: 5px;
   color: #3a4145;
@@ -109,11 +111,11 @@ html body .header .name {
   margin-left: auto;
   font-family: open sans, sans-serif;
 }
-html body .header .name:hover {
+html body header .name:hover {
   cursor: pointer;
   color: #007199;
 }
-html body .header h2 {
+html body header h2 {
   color: #0096cc;
   font-weight: lighter;
   position: relative;
@@ -121,11 +123,12 @@ html body .header h2 {
   top: -10px;
   font-family: Merriweather, serif;
 }
-html body .header h2:hover {
+html body header h2:hover {
   cursor: pointer;
   color: #007199;
 }
-html body .body {
+html body main {
+  width: auto;
   max-width: 650px;
   display: block;
   min-height: 350px;
@@ -135,7 +138,7 @@ html body .body {
   line-height: 1.75em;
   padding-bottom: 15px;
 }
-html body .body .left-col {
+html body main .left-col {
   position: relative;
   width: 75%;
   float: left;
@@ -144,14 +147,14 @@ html body .body .left-col {
   font-size: 16px;
   padding: 30px 30px 30px 0;
 }
-html body .body .left-col h3 {
+html body main .left-col h3 {
   font-family: open sans, sans-serif;
   font-size: 25px;
 }
-html body .body .left-col .important {
+html body main .left-col .important {
   color: #0096cc;
 }
-html body .body .right-col {
+html body main .right-col {
   position: relative;
   width: 25%;
   padding: 30px 13px;
@@ -159,29 +162,29 @@ html body .body .right-col {
   float: right;
   color: black;
 }
-html body .body .right-col h3 {
+html body main .right-col h3 {
   font-family: open sans, sans-serif;
   color: #2e2e2e;
   font-size: 25px;
   padding: 0 10px;
 }
-html body .body .right-col ul {
+html body main .right-col ul {
   list-style-type: none;
   padding: 0px;
   margin: 0px;
 }
-html body .body .right-col ul li {
+html body main .right-col ul li {
   padding: 0 10px;
   margin: 0;
 }
-html body .body .right-col ul li a {
+html body main .right-col ul li a {
   text-decoration: none;
   color: black;
 }
-html body .body .right-col ul li a i {
+html body main .right-col ul li a i {
   font-size: 30px;
 }
-html body .body .right-col ul li a span {
+html body main .right-col ul li a span {
   padding: 6px;
   font-size: 15px;
   position: relative;
@@ -190,53 +193,90 @@ html body .body .right-col ul li a span {
   display: inline-block;
   font-family: Montserrat;
 }
-html body .body .right-col ul li a:hover {
+html body main .right-col ul li a:hover {
   cursor: pointer;
   color: #0096cc;
 }
-html body .body .right-col ul li:hover {
+html body main .right-col ul li:hover {
   cursor: pointer;
   color: #0096cc;
 }
-html body .footer {
+html body footer {
   width: 100%;
   position: relative;
   border-top: 1px solid lightgray;
 }
-html body .footer p {
+html body footer p {
   color: #aaa;
   display: block;
-  padding: 0 10px;
+  margin: 0;
+  padding: 10px 20px;
   float: left;
 }
-html body .footer ul {
+html body footer ul {
   list-style-type: none;
-  padding: 0;
+  padding: 5px 10px;
   margin: 0;
   position: relative;
   display: block;
-  margin-top: 10px;
   float: right;
 }
-html body .footer ul li {
+html body footer ul li {
   display: inline-block;
-  float: right;
   padding: 5px;
   margin: 0;
   color: #aaa;
 }
-html body .footer ul li a {
+html body footer ul li a {
   text-decoration: none;
   color: #aaa;
 }
-html body .footer ul li a:hover {
+html body footer ul li a:hover {
   cursor: pointer;
   color: #0096cc;
 }
 
-@media (max-width: 800px) {
-  a {
-    background-color: red;
+@media (max-width: 768px) {
+  html {
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+  body nav {
+    display: grid;
+    grid-template-columns: auto 60px;
+    grid-template-areas: "logo button" "navbar navbar";
+  }
+  body nav .logo {
+    grid-area: logo;
+  }
+  body nav .toggleButton {
+    grid-area: button;
+    display: inline-block !important;
+  }
+  body nav .collapsible {
+    float: none;
+    grid-area: navbar;
+  }
+  body nav .collapsible a {
+    border-top: 1px solid lightgrey;
+    display: block;
+    float: none;
+    width: 100%;
+    padding: 20px !important;
+  }
+  body header {
+    height: auto !important;
+  }
+  body main .left-col {
+    float: none;
+    width: 100%;
+  }
+  body main .right-col {
+    float: none;
+    width: 100px;
   }
 }
 
